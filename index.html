@@ -395,62 +395,6 @@
     /* ── Catalogs ── */
     #catalogs { background: var(--light); }
 
-    .catalogs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .catalog-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      transition: box-shadow .2s, transform .2s;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .catalog-card:hover {
-      box-shadow: var(--shadow);
-      transform: translateY(-2px);
-    }
-
-    .catalog-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--blue), var(--accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      flex-shrink: 0;
-    }
-
-    .catalog-info strong {
-      display: block;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 3px;
-    }
-
-    .catalog-info span {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .catalog-download {
-      margin-left: auto;
-      font-size: 18px;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
     /* ── Contact ── */
     #contact { background: var(--white); }
 
@@ -496,57 +440,6 @@
     }
     .contact-item-text a:hover { color: var(--accent); }
 
-    .contact-form {
-      background: var(--light);
-      border-radius: 14px;
-      padding: 36px;
-    }
-
-    .contact-form h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 24px;
-    }
-
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-
-    .form-group label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      padding: 11px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      font-size: 14px;
-      font-family: inherit;
-      color: var(--text);
-      background: var(--white);
-      transition: border-color .2s;
-      outline: none;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--accent);
-    }
-
-    .form-group textarea { resize: vertical; min-height: 110px; }
-
-    .form-submit { width: 100%; padding: 13px; font-size: 15px; }
 
     /* ── Footer ── */
     footer {
@@ -1043,64 +936,47 @@
 <section id="catalogs">
   <div class="section-label">Resources</div>
   <h2 class="section-title">Catalogs &amp; Datasheets</h2>
-  <p class="section-desc">Download our product catalogs and technical datasheets. For the latest specifications or SDS documents, contact our team.</p>
+  <p class="section-desc">We provide product catalogs, technical datasheets, and Safety Data Sheets (SDS) on request.</p>
 
-  <div class="catalogs-grid">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;">
 
-    <a href="#" class="catalog-card">
-      <div class="catalog-icon">📘</div>
-      <div class="catalog-info">
-        <strong>Product Catalog 2024</strong>
-        <span>Full portfolio — all materials &amp; compounds</span>
-      </div>
-      <div class="catalog-download">⬇</div>
-    </a>
+    <div style="background:var(--light);border-radius:14px;padding:32px;">
+      <div style="font-size:32px;margin-bottom:14px;">📘</div>
+      <h3 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;">Product Catalog</h3>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:0;">Our full product catalog covers all material categories — III-VI compounds, ceramics, nitrides, graphene, nanopowders, and thermal interface materials.</p>
+    </div>
 
-    <a href="#" class="catalog-card">
-      <div class="catalog-icon">📄</div>
-      <div class="catalog-info">
-        <strong>Sulfides Datasheet</strong>
-        <span>ZnS, In₂S₃, CuS &amp; more</span>
-      </div>
-      <div class="catalog-download">⬇</div>
-    </a>
+    <div style="background:var(--light);border-radius:14px;padding:32px;">
+      <div style="font-size:32px;margin-bottom:14px;">📄</div>
+      <h3 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;">Technical Datasheets</h3>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:0;">Detailed specifications including purity, particle size, phase, and physical properties are available for each material we supply.</p>
+    </div>
 
-    <a href="#" class="catalog-card">
-      <div class="catalog-icon">📄</div>
-      <div class="catalog-info">
-        <strong>Selenides Datasheet</strong>
-        <span>GaSe, In₂Se₃, CdSe &amp; more</span>
-      </div>
-      <div class="catalog-download">⬇</div>
-    </a>
+    <div style="background:var(--light);border-radius:14px;padding:32px;">
+      <div style="font-size:32px;margin-bottom:14px;">🧪</div>
+      <h3 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;">Safety Data Sheets (SDS)</h3>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:0;">SDS documents are available per material to support safe handling, storage, and disposal in compliance with laboratory and industrial standards.</p>
+    </div>
 
-    <a href="#" class="catalog-card">
-      <div class="catalog-icon">📄</div>
-      <div class="catalog-info">
-        <strong>Tellurides Datasheet</strong>
-        <span>Bi₂Te₃, Sb₂Te₃, SnTe &amp; more</span>
-      </div>
-      <div class="catalog-download">⬇</div>
-    </a>
+    <div style="background:var(--light);border-radius:14px;padding:32px;">
+      <div style="font-size:32px;margin-bottom:14px;">📑</div>
+      <h3 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;">Certificate of Analysis (CoA)</h3>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:0;">Certificates of Analysis confirming purity and batch specifications are provided with orders and available on request.</p>
+    </div>
 
-    <a href="#" class="catalog-card">
-      <div class="catalog-icon">🧪</div>
-      <div class="catalog-info">
-        <strong>SDS / Safety Data Sheets</strong>
-        <span>Available on request per material</span>
-      </div>
-      <div class="catalog-download">⬇</div>
-    </a>
+  </div>
 
-    <a href="#contact" class="catalog-card" style="background:var(--navy);border-color:var(--navy);">
-      <div class="catalog-icon" style="background:rgba(255,255,255,0.12)">📩</div>
-      <div class="catalog-info">
-        <strong style="color:#fff">Request a Document</strong>
-        <span style="color:#8aafd4">Need a specific datasheet? Ask us.</span>
-      </div>
-      <div class="catalog-download" style="color:#7dc3ff">→</div>
-    </a>
-
+  <div style="margin-top:36px;background:linear-gradient(135deg,var(--navy),#1a4a8a);border-radius:14px;padding:36px;max-width:860px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:240px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7dc3ff;margin-bottom:8px;">Request a Document</div>
+      <h3 style="font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;">Interested in our catalogs or datasheets?</h3>
+      <p style="font-size:14px;color:#a8c0d8;line-height:1.7;">Simply drop us an email at <strong style="color:#fff;">contact@iii-vi.com</strong> with the material name and document type you need. We'll respond within 1 business day.</p>
+    </div>
+    <div style="flex-shrink:0;">
+      <a href="mailto:contact@iii-vi.com?subject=Document%20Request%20-%20III-VI%20Nanomaterials" class="btn btn-primary">
+        📧 &nbsp;Request via Email
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1110,8 +986,9 @@
   <h2 class="section-title">Get In Touch</h2>
   <p class="section-desc">Whether you need a quote, a datasheet, or technical advice — we're here to help.</p>
 
-  <div class="contact-grid">
-    <div class="contact-info">
+  <div style="max-width:680px;">
+    <div style="display:flex;flex-direction:column;gap:20px;">
+
       <div class="contact-item">
         <div class="contact-item-icon">📧</div>
         <div class="contact-item-text">
@@ -1119,6 +996,7 @@
           <a href="mailto:contact@iii-vi.com">contact@iii-vi.com</a>
         </div>
       </div>
+
       <div class="contact-item">
         <div class="contact-item-icon">🕐</div>
         <div class="contact-item-text">
@@ -1126,48 +1004,20 @@
           <span>Mon – Fri, 9:00 AM – 5:30 PM (MYT)</span>
         </div>
       </div>
-      <div style="margin-top:8px;padding:20px;background:var(--light);border-radius:10px;">
-        <strong style="font-size:14px;color:var(--navy)">Response Time</strong>
-        <p style="font-size:13px;color:var(--muted);margin-top:4px;line-height:1.6">We typically respond to enquiries within 1 business day. For urgent requests, please email us directly.</p>
-      </div>
+
     </div>
 
-    <div class="contact-form">
-      <h3>Send an Enquiry</h3>
-      <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="Ali" />
-        </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Ahmad" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="ali@university.edu.my" />
-      </div>
-      <div class="form-group">
-        <label>Organisation</label>
-        <input type="text" placeholder="University / Company name" />
-      </div>
-      <div class="form-group">
-        <label>Enquiry Type</label>
-        <select>
-          <option>Product Inquiry</option>
-          <option>Request a Quote</option>
-          <option>Request a Datasheet / SDS</option>
-          <option>Technical Support</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Describe the material, quantity, purity grade, or any specific requirements…"></textarea>
-      </div>
-      <button class="btn btn-primary form-submit">Send Enquiry</button>
-      <p style="font-size:12px;color:var(--muted);margin-top:12px;text-align:center">We respect your privacy. Your information is never shared with third parties.</p>
+    <div style="margin-top:36px;background:var(--light);border-radius:14px;padding:36px;">
+      <h3 style="font-size:20px;font-weight:700;color:var(--navy);margin-bottom:12px;">Send Us an Email</h3>
+      <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:24px;">
+        For product enquiries, quotes, datasheet requests, or technical questions — email us directly and we'll get back to you within 1 business day.
+      </p>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">
+        Please include in your email: <strong style="color:var(--text)">material name, quantity, purity grade required,</strong> and your organisation.
+      </p>
+      <a href="mailto:contact@iii-vi.com?subject=Product%20Enquiry%20-%20III-VI%20Nanomaterials" class="btn btn-primary" style="display:inline-block;">
+        📧 &nbsp;Email Us at contact@iii-vi.com
+      </a>
     </div>
   </div>
 </section>
